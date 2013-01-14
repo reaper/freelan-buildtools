@@ -41,14 +41,10 @@ class MacEnvironment(PosixEnvironment):
             self['LINKFLAGS'].remove('-m32')
 
         self['CXXFLAGS'].append('-arch')
-        self['CXXFLAGS'].append('i386')
-        self['CXXFLAGS'].append('-arch')
         self['CXXFLAGS'].append('x86_64')
 
         # if compiled from sources, additionnal libs are in /usr/local/lib       
         self['LINKFLAGS'].append('-L/usr/local/lib')
-        self['LINKFLAGS'].append('-arch')
-        self['LINKFLAGS'].append('i386')
         self['LINKFLAGS'].append('-arch')
         self['LINKFLAGS'].append('x86_64')
 
